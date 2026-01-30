@@ -103,63 +103,212 @@
 
 					<table class="table table-bordered">
 					<tr style="color: white; background: #59B3A9;">
-						<td><b><span style="color: white;">Week</span></b></span></td>
-						<td><b><span style="color: white;">Topic</span></b></td>
-						<td><b><span style="color: white;">Material</span></b></td>
-						<td><b><span style="color: white;">Extra reading</span></b></td>
+						<td><b><span style="color: white;">Week</span></b></td>
+						<td><b><span style="color: white;">Lesson Topic</span></b></td>
+						<td><b><span style="color: white;">Description</span></b></td>
+						<td><b><span style="color: white;">Readings</span></b></td>
+						<td><b><span style="color: white;">Notes</span></b></td>
 					</tr>
+					<!-- Week 1 -->
 					<tr>
-						<td rowspan="2" class="merged">1</td> 
-						<td>Introduction</td>
-						<td>
-							<a href="https://colab.research.google.com/gist/AmirZur/cf8a2edcaca3442d45b9640cfa970ce2/lecture-1-introduction-to-language-models.ipynb">
-								Lecture 1 notebook
-							</a>
-						</td>
+						<td rowspan="2" class="merged">1<br>Intro + Behavioral Analysis</td>
+						<td>Intro - course overview, glossary/framing, preview of cool stuff</td>
+						<td>Go over course topics/goals. Review neural networks (weights vs. activations) and transformer components (MLPs, attention heads, residual streams). Introduce key concepts of causal analysis (intervention, counterfactual behavior)</td>
 						<td>
 							<ul>
-								<li><a href="https://nlp.seas.harvard.edu/annotated-transformer/">The annotated transformer</a></li>
-								<li><a href="https://transformer-circuits.pub/2021/framework/index.html">Circuits thread</a></li>
+								<li><a href="https://nlp.seas.harvard.edu/annotated-transformer/">Rush et al. 2018 (annotated transformer)</a></li>
+								<li><a href="https://transformer-circuits.pub/2021/framework/index.html">Elhage et al. 2021</a></li>
 							</ul>
 						</td>
+						<td>Transformers Notebook<br><a href="https://colab.research.google.com/gist/AmirZur/cf8a2edcaca3442d45b9640cfa970ce2/lecture-1-introduction-to-language-models.ipynb">Lecture 1: Introduction to Language Models</a></td>
 					</tr>
 					<tr>
-						<td>Row 2 - Col 2</td>
-						<td>Row 2 - Col 3</td>
-						<td>Row 2 - Col 4</td>
+						<td>From the outside: behavioral analysis</td>
+						<td>How can we understand a model by intervening on its inputs? Behavioral evaluation with minimal pairs and perturbations. Attributing model behavior to its inputs.</td>
+						<td>LIME, SHAP, Integrated gradients, ICL</td>
+						<td>Transformers Notebook</td>
 					</tr>
-
+					<!-- Week 2 -->
 					<tr>
-						<td rowspan="2" class="merged">2</td> 
-						<td>Row 3 - Col 2</td>
-						<td>Row 3 - Col 3</td>
-						<td>Row 3 - Col 4</td>
-					</tr>
-					<tr>
-						<td>Row 4 - Col 2</td>
-						<td>Row 4 - Col 3</td>
-						<td>Row 4 - Col 4</td>
-					</tr>
-
-					<tr>
-						<td rowspan="2" class="merged">3</td>
-						<td>Row 5 - Col 2</td>
-						<td>Row 5 - Col 3</td>
-						<td>Row 5 - Col 4</td>
+						<td rowspan="2" class="merged">2<br>Probing + Intervention</td>
+						<td>Fundamentals + probing and steering</td>
+						<td>First step into unpacking the black box. What information can we decode from the activations of a neural network? Static probing (logit lens), trained supervised probes, and difference-in-means probing.</td>
+						<td>
+							<ul>
+								<li>Wendler et al. 2024 (logit lens)</li>
+								<li>Hewitt et al. 2019 (supervised probing)</li>
+								<li>Marks et al. 2023 (contrastive probing)</li>
+							</ul>
+						</td>
+						<td>NNsight Notebook<br><a href="https://nnsight.net/tutorials/the_geometry_of_truth/">The Geometry of Truth — nnsight</a></td>
 					</tr>
 					<tr>
-						<td>Row 6 - Col 2</td>
-						<td>Row 6 - Col 3</td>
-						<td>Row 6 - Col 4</td>
+						<td>Ablations and Interchanges</td>
+						<td>What information is actually used by the model? Overview of different ablation strategies which intervene on the model's activations. Types of ablations: random noise, zero-out, attention head knockouts, null-space. Introduce difference-in-means steering. Conclude with representation fine-tuning (ReFT).</td>
+						<td>
+							<ul>
+								<li>Meng et al. 2022 (ROME)</li>
+								<li>Ravfogel et al. (nullspace projection)</li>
+								<li>Geva et al. 2023 (knockouts)</li>
+								<li>Wu et al. 2024 (ReFT)</li>
+							</ul>
+						</td>
+						<td>NNsight Notebook<br><a href="https://nnsight.net/tutorials/causal_mediation_analysis/">Causal Mediation Analysis I — nnsight</a></td>
 					</tr>
-
+					<!-- Week 3 -->
 					<tr>
-						<td rowspan="2" class="merged">4</td>
-						<td>Row 7 - Col 2</td>
-						<td>Row 7 - Col 3</td>
-						<td>Row 7 - Col 4</td>
+						<td rowspan="2" class="merged">3<br>Causal Mediation</td>
+						<td>Causal Mediation (Causal Tracing)</td>
+						<td>The basics of causal mediation analysis. How total effect decomposes into indirect and direct effects. An example with causal tracing, where the intervention injects noise and the indirect effect of hidden vectors is measured.</td>
+						<td>
+							<ul>
+								<li>Vig et al. 2020 (Mediation and gender bias)</li>
+								<li>Meng et al. 2022 (ROME)</li>
+								<li>Mueller et al. 2025 (Quest for the right mediator)</li>
+								<li>Conmy et al. 2023 (ACDC)</li>
+							</ul>
+						</td>
+						<td>NNsight Notebook</td>
 					</tr>
-					</table>
+					<tr>
+						<td>Theory of causal abstraction</td>
+						<td>The theoretical foundations of "reverse-engineering" neural networks into an algorithm. How neural networks and algorithms are represented by causal models. How abstraction-under-translation underpins computational implementation.</td>
+						<td>
+							<ul>
+								<li>Rubenstein et al. 2017</li>
+								<li>Beckers et al. 2019</li>
+								<li>Geiger et al. 2021, 2025a,b</li>
+							</ul>
+						</td>
+						<td>Causalab Notebook</td>
+					</tr>
+					<!-- Week 4 -->
+					<tr>
+						<td rowspan="2" class="merged">4<br>Causal Abstraction</td>
+						<td>Designing Counterfactuals</td>
+						<td>How do we localize a causal variable into the internals of a neural network in practice? A framework for hypothesis testing and practical advice on designing counterfactuals.</td>
+						<td>
+							<ul>
+								<li>Wang et al. 2023 (Interp in the wild)</li>
+								<li>Prakash et al. 2025 (lookback)</li>
+								<li>Gur-Arieh et al. 2025 (mixing mechanisms)</li>
+							</ul>
+						</td>
+						<td>Causalab Notebook</td>
+					</tr>
+					<tr>
+						<td>Desiderata-Based Masking, Distributed Alignment Search</td>
+						<td>How can we use machine learning tools to help us localize causal variables? Training binary masks using desiderata articulated in causal terms. Example applications to selecting neurons in MLPs or attention heads.</td>
+						<td>
+							<ul>
+								<li>Davies et al. 2023</li>
+								<li>Cao et al. 2020, 2022</li>
+								<li>Wu et al. 2023 (Boundless DAS)</li>
+								<li>Geiger et al. 2024 (DAS)</li>
+							</ul>
+						</td>
+						<td>Causalab Notebook</td>
+					</tr>
+					<!-- Week 5 -->
+					<tr>
+						<td rowspan="2" class="merged">5<br>Feature Geometry</td>
+						<td>Variants of the LRH</td>
+						<td>What is the geometry of representations in model activations? Overview of the Linear Representation Hypothesis (LRH), evidence for it, and its implications.</td>
+						<td>
+							<ul>
+								<li>Park et al. 2024 (Victor Veitch paper)</li>
+								<li>Smolensky 1986</li>
+								<li><a href="https://transformer-circuits.pub/2023/linear-representations/index.html">Olah and Jermyn note</a></li>
+							</ul>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Ideas outside the LRH</td>
+						<td>When does the Linear Representation Hypothesis fail to describe feature geometry? Feature manifolds, helices, approaches beyond activation space?</td>
+						<td>
+							<ul>
+								<li>Modell et al. 2025 (representation manifolds)</li>
+								<li>Kantamneni et al. 2025 (trigonometry for addition)</li>
+								<li>Gurnee et al. 2025 (linebreaks)</li>
+							</ul>
+						</td>
+						<td></td>
+					</tr>
+					<!-- Week 6 -->
+					<tr>
+						<td rowspan="2" class="merged">6<br>Scalable Unsupervised Decomposition</td>
+						<td>Sparse Autoencoders</td>
+						<td>How can we decompose model activations at a given location into interpretable features? Polysemanticity, feature superposition, and sparse autoencoders.</td>
+						<td>
+							<ul>
+								<li><a href="https://transformer-circuits.pub/2022/toy_model/index.html">Elhage et al. 2022 (Toy models of superposition)</a></li>
+								<li>Cunningham et al. 2023 (SAEs)</li>
+							</ul>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Variants and other stuff</td>
+						<td>How do SAEs scale to production LLMs? What assumptions do SAEs bake in, and how can other methods extend them? Cross-layer transcoders, temporal variation, parameter decomposition.</td>
+						<td>
+							<ul>
+								<li>Ameisen et al. 2025 (Circuit tracing)</li>
+								<li>Singh et al. 2025 (Priors in time)</li>
+								<li>Bushnaq et al. 2025 (SPD)</li>
+							</ul>
+						</td>
+						<td></td>
+					</tr>
+					<!-- Week 7 -->
+					<tr>
+						<td rowspan="2" class="merged">7<br>Computational Motifs</td>
+						<td>Induction heads, lookback, summarization, copy suppressor</td>
+						<td>What "algorithmic primitives" do transformers tend to use? We walk through a few papers which find computational motifs that recur across many studied mechanisms.</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>–</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<!-- Week 8 -->
+					<tr>
+						<td rowspan="2" class="merged">8<br>The Role of Training Data</td>
+						<td>Memorization, the role of data</td>
+						<td>What is memorization: reconstruction vs. counterfactual. How LLMs encode memorized training instances. How training data shapes internal representations.</td>
+						<td>
+							<ul>
+								<li>Zhang et al. 2023 (counterfactual definition)</li>
+								<li>Carlini et al. 2021, 2023</li>
+								<li>Huang et al. 2024 (counterfactual, localization)</li>
+							</ul>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Developmental interp and training dynamics</td>
+						<td>How structures emerge in pre-training of LLMs (interventions on training runs, phase transition).</td>
+						<td>Chen et al. 2023</td>
+						<td></td>
+					</tr>
+					<!-- Week 9 -->
+					<tr>
+						<td rowspan="2" class="merged">9<br>Buffer Day</td>
+						<td>Open problems and new directions, biomodels</td>
+						<td></td>
+						<td></td>
+						<td>Elana Simon</td>
+					</tr>
+					<tr>
+						<td>Buffer day</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</table>
 
 					<!-- <div class="col-6 col-12-medium">
 						<header class="major">
@@ -178,7 +327,7 @@
 		<!-- Footer -->
 		<section id="footer">
 			<ul class="actions special">
-				<li><a href="#" class="button wide primary">Apply here</a></li>
+				<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSel0YSCNeMd3xc1CQ6q1hnvMp-sY4th3OEhcv_gqV2WHdiGPw/viewform" class="button wide primary">Apply here</a></li>
 			</ul>
 			<!-- <ul class="icons">
 				<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
