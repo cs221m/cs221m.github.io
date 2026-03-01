@@ -18,12 +18,15 @@
 		<section id="header">
 			<div class="inner">
 				<h1>
-					<span><img src="images/stanford_logo.png" width=80px style="vertical-align: middle;"></span> 
+					<span><img src="images/stanford_logo.png" width=80px style="vertical-align: middle;"></span>
 					CS 221M: Mechanistic Interpretability
 				</h1>
 				<p>Stanford University, Spring 2026</p>
 				<ul class="actions special">
 					<li><a href="#one" class="button scrolly">Course details</a></li>
+				</ul>
+				<ul class="actions special">
+					<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSel0YSCNeMd3xc1CQ6q1hnvMp-sY4th3OEhcv_gqV2WHdiGPw/viewform" class="button wide primary">Apply</a></li>
 				</ul>
 			</div>
 		</section>
@@ -33,7 +36,7 @@
 				<header class="major">
 					<h2>Course description</h2>
 				</header>
-				<p>How do neural networks work internally? This course provides an introduction to *interpretability*, the subfield of machine learning concerned with understanding precisely how models process information and why they produce specific outputs. We will cover topics such as probing, steering, causal abstraction, and sparse autoencoders, with a particular emphasis on causal methods and large language models. The course will include guest lectures from leading interpretability labs across academia and industry.</p>
+				<p>How do neural networks work internally? This course provides an introduction to <i>interpretability</i>, the subfield of machine learning concerned with understanding precisely how models process information and why they produce specific outputs. We will cover topics such as probing, steering, causal abstraction, and sparse autoencoders, with a particular emphasis on causal methods and large language models. The course will include guest lectures from leading interpretability labs across academia and industry.</p>
 				<h3>Course Staff</h3>
 				<div class="team-container">
 					<div class="team-member">
@@ -74,6 +77,15 @@
 					</div>
 					<div class="team-member">
 						<div class="profile-layout">
+						<img src="images/junyi_tao.jpg" alt="Junyi Tao" class="headshot">
+						<div>
+							<span class="member-name">Junyi Tao</span>
+							<span class="member-role">Instructor</span>
+						</div>
+						</div>
+					</div>
+					<div class="team-member">
+						<div class="profile-layout">
 						<img src="images/siri_vatsavaya.jpg" alt="Siri Vatsavaya" class="headshot">
 						<div>
 							<span class="member-name">Siri Vatsavaya</span>
@@ -97,9 +109,9 @@
 			<div class="container">
 				<!-- <div class="row gtr-150"> -->
 					<header class="major">
-						<h2>Syllabus</h2>
+						<h2>Schedule</h2>
 					</header>
-					<p><em>Note: Syllabus is subject to change.</em></p>
+					<p><em>Note: schedule is subject to change.</em></p>
 
 					<div style="overflow-x: auto;">
 						<table class="table table-bordered" style="width: 100%; table-layout: fixed;">
@@ -116,7 +128,21 @@
 									<br>
 									<span style="font-size: 0.85em;">Mon. March 30</span>
 								</td>
-								<td>Introduction and review of language models</td>
+								<td>Introduction</td>
+								<td>
+									<div style="text-align: left;">
+										&mdash;
+									</div>
+								</td>
+								<td>&mdash;</td>
+							</tr>
+							<tr>
+								<td>
+									<b>Week 1</b>
+									<br>
+									<span style="font-size: 0.85em;">Wed. April 1</span>
+								</td>
+								<td>Review of language models</td>
 								<td>
 									<div style="text-align: left;">
 										<a href="https://nlp.seas.harvard.edu/annotated-transformer/">Rush et al. 2018 annotated transformer</a>
@@ -130,9 +156,9 @@
 							</tr>
 							<tr>
 								<td>
-									<b>Week 1</b>
+									<b>Week 2</b>
 									<br>
-									<span style="font-size: 0.85em;">Wed. April 1</span>
+									<span style="font-size: 0.85em;">Mon. April 6</span>
 								</td>
 								<td>Behavioral analysis and input attribution</td>
 								<td>
@@ -146,9 +172,9 @@
 								<td>
 									<b>Week 2</b>
 									<br>
-									<span style="font-size: 0.85em;">Mon. April 6</span>
+									<span style="font-size: 0.85em;">Wed. April 8</span>
 								</td>
-								<td>Probing activations and steering behavior</td>
+								<td>Probes for decoding activations</td>
 								<td>
 									<div style="text-align: left;">
 										<a href="https://aclanthology.org/2024.acl-long.820/">Wendler et al. 2024 llamas think in english</a>
@@ -164,11 +190,11 @@
 							</tr>
 							<tr>
 								<td>
-									<b>Week 2</b>
+									<b>Week 3</b>
 									<br>
-									<span style="font-size: 0.85em;">Wed. April 8</span>
+									<span style="font-size: 0.85em;">Mon. April 13</span>
 								</td>
-								<td>Ablating activations</td>
+								<td>Interventions for steering activations</td>
 								<td>
 									<div style="text-align: left;">
 										<a href="https://arxiv.org/abs/2202.05262">Meng et al. 2022 editing facts</a>
@@ -186,7 +212,7 @@
 								<td>
 									<b>Week 3</b>
 									<br>
-									<span style="font-size: 0.85em;">Mon. April 13</span>
+									<span style="font-size: 0.85em;">Wed. April 15</span>
 								</td>
 								<td>Causal mediation analysis</td>
 								<td>
@@ -202,11 +228,11 @@
 							</tr>
 							<tr>
 								<td>
-									<b>Week 3</b>
+									<b>Week 4</b>
 									<br>
-									<span style="font-size: 0.85em;">Wed. April 15</span>
+									<span style="font-size: 0.85em;">Mon. April 20</span>
 								</td>
-								<td>Theory of causal abstraction</td>
+								<td>Theory of causal abstraction I</td>
 								<td>
 									<div style="text-align: left;">
 										<a href="https://arxiv.org/abs/1707.00819">Rubenstein et al. 2017</a>
@@ -222,7 +248,7 @@
 								<td>
 									<b>Week 4</b>
 									<br>
-									<span style="font-size: 0.85em;">Mon. April 20</span>
+									<span style="font-size: 0.85em;">Wed. April 22</span>
 								</td>
 								<td>Designing counterfactuals</td>
 								<td>
@@ -236,9 +262,9 @@
 							</tr>
 							<tr>
 								<td>
-									<b>Week 4</b>
+									<b>Week 5</b>
 									<br>
-									<span style="font-size: 0.85em;">Wed. April 22</span>
+									<span style="font-size: 0.85em;">Mon. April 27</span>
 								</td>
 								<td>Automated causal interpretability</td>
 								<td>
@@ -258,7 +284,21 @@
 								<td>
 									<b>Week 5</b>
 									<br>
-									<span style="font-size: 0.85em;">Mon. April 27</span>
+									<span style="font-size: 0.85em;">Wed. April 29</span>
+								</td>
+								<td>Theory of causal abstraction II</td>
+								<td>
+									<div style="text-align: left;">
+										&mdash;
+									</div>
+								</td>
+								<td>&mdash;</td>
+							</tr>
+							<tr>
+								<td>
+									<b>Week 6</b>
+									<br>
+									<span style="font-size: 0.85em;">Mon. May 4</span>
 								</td>
 								<td>Linear representation hypothesis</td>
 								<td>
@@ -274,9 +314,9 @@
 							</tr>
 							<tr>
 								<td>
-									<b>Week 5</b>
+									<b>Week 6</b>
 									<br>
-									<span style="font-size: 0.85em;">Wed. April 29</span>
+									<span style="font-size: 0.85em;">Wed. May 6</span>
 								</td>
 								<td>Ideas outside the LRH</td>
 								<td>
@@ -292,9 +332,9 @@
 							</tr>
 							<tr>
 								<td>
-									<b>Week 6</b>
+									<b>Week 7</b>
 									<br>
-									<span style="font-size: 0.85em;">Mon. May 4</span>
+									<span style="font-size: 0.85em;">Mon. May 11</span>
 								</td>
 								<td>Sparse autoencoders</td>
 								<td>
@@ -308,9 +348,9 @@
 							</tr>
 							<tr>
 								<td>
-									<b>Week 6</b>
+									<b>Week 7</b>
 									<br>
-									<span style="font-size: 0.85em;">Wed. May 6</span>
+									<span style="font-size: 0.85em;">Wed. May 13</span>
 								</td>
 								<td>Unsupervised interpretability</td>
 								<td>
@@ -322,26 +362,6 @@
 										<a href="https://arxiv.org/abs/2506.20790">Bushnaq et al. 2025 SPD</a>
 									</div>
 								</td>
-								<td>&mdash;</td>
-							</tr>
-							<tr>
-								<td>
-									<b>Week 7</b>
-									<br>
-									<span style="font-size: 0.85em;">Mon. May 11</span>
-								</td>
-								<td>&mdash;</td>
-								<td>&mdash;</td>
-								<td>&mdash;</td>
-							</tr>
-							<tr>
-								<td>
-									<b>Week 7</b>
-									<br>
-									<span style="font-size: 0.85em;">Wed. May 13</span>
-								</td>
-								<td>&mdash;</td>
-								<td>&mdash;</td>
 								<td>&mdash;</td>
 							</tr>
 							<tr>
@@ -435,9 +455,6 @@
 
 		<!-- Footer -->
 		<section id="footer">
-			<ul class="actions special">
-				<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSel0YSCNeMd3xc1CQ6q1hnvMp-sY4th3OEhcv_gqV2WHdiGPw/viewform" class="button wide primary">Apply here</a></li>
-			</ul>
 			<!-- <ul class="icons">
 				<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
 				<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>

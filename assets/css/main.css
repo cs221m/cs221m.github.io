@@ -2985,7 +2985,7 @@ input, select, textarea {
 				#header input[type="button"].primary:hover,
 				#header button.primary:hover,
 				#header .button.primary:hover {
-					background-color: rgba(255, 255, 255, 0.125) !important;
+					background-color: #B83A4B !important;
 					color: #ffffff !important;
 				}
 
@@ -2994,7 +2994,7 @@ input, select, textarea {
 				#header input[type="button"].primary:active,
 				#header button.primary:active,
 				#header .button.primary:active {
-					background-color: rgba(255, 255, 255, 0.25) !important;
+					background-color: #B83A4B !important;
 				}
 
 		#header ul.major-icons li .icon {
@@ -3520,7 +3520,7 @@ input, select, textarea {
 /* 2. The Individual Item (The "Cell") */
 .team-member {
 	box-sizing: border-box; /* Ensures padding doesn't add to width */
-	width: 20%; /* 5 items per row (100% / 5 = 20%) */
+	width: 33.33%; /* 3 items per row on desktop */
 	padding: 10px; /* Space between people */
 	min-width: 200px; /* Prevents them from getting unreadably squashed */
 }
@@ -3556,17 +3556,10 @@ input, select, textarea {
 }
 
 /* 4. Responsive Design (Media Query) */
-/* When screen is smaller than 1000px, show 3 per row */
-@media (max-width: 1000px) {
-	.team-member {
-		width: 33.33%; 
-	}
-}
-
-/* When screen is smaller than 600px, show 1 per row (Stack them) */
+/* When screen is smaller than 600px (phone), show 2 per row */
 @media (max-width: 600px) {
 	.team-member {
-		width: 100%;
+		width: 50%;
 	}
 }
 
