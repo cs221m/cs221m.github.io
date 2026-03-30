@@ -29,6 +29,21 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+details {
+	border: 1px solid #B83A4B;
+	border-radius: 8px;
+	padding: 20px;
+}
+
+summary {
+	cursor: pointer;
+	outline: none;
+}
+
+details[open] {
+	background-color: white;
+}
+
 body {
 	line-height: 1;
 }
